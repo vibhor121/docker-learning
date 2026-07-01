@@ -58,6 +58,34 @@ Runs on **http://localhost:5173**
 | Backend | Node.js, Express, Socket.io |
 | Database | None (in-memory while server runs) |
 
+## Docker
+
+No database container is needed — this app uses in-memory sync only.
+
+### Run with Docker Compose
+
+```bash
+docker compose up --build
+```
+
+| Service | URL |
+|---------|-----|
+| Frontend | http://localhost:5173 |
+| Backend | http://localhost:3000 |
+
+Stop containers:
+
+```bash
+docker compose down
+```
+
+Or use npm scripts from the project root:
+
+```bash
+npm run docker:up
+npm run docker:down
+```
+
 ## Environment
 
 Create `frontend/.env`:
